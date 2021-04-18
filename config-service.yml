@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - image: ${REPOSITORY_TAG} #CHANGE
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         name: config-service
         ports:
         - name: liveness-port
