@@ -22,7 +22,7 @@ spec:
         app: config-service
     spec:
       containers:
-      - image: aniketharode/kubernatescommunication:0.0.12-SNAPSHOT #CHANGE
+      - image: ${REPOSITORY_TAG} #CHANGE
         imagePullPolicy: IfNotPresent
         name: config-service
         ports:
