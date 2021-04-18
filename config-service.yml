@@ -35,13 +35,13 @@ spec:
           httpGet:
             path: /ConfigServer/default
             port: 8012
-          initialDelaySeconds: 80
+          initialDelaySeconds: 60
           periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /ConfigServer/default
             port: 8012
-          initialDelaySeconds: 80
+          initialDelaySeconds: 60
           periodSeconds: 10
       restartPolicy: Always
       terminationGracePeriodSeconds: 20
