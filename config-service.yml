@@ -27,20 +27,20 @@ spec:
         name: config-service
         ports:
         - name: liveness-port
-          containerPort: 8100
+          containerPort: 8012
 #        env: //CHANGE
 #          - name: CURRENCY_EXCHANGE_URI
 #            value: http://currency-exchange
         livenessProbe:
           httpGet:
             path: /ConfigServer/default
-            port: 8100
+            port: 8012
           initialDelaySeconds: 80
           periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /ConfigServer/default
-            port: 8100
+            port: 8012
           initialDelaySeconds: 80
           periodSeconds: 10
       restartPolicy: Always
@@ -58,7 +58,7 @@ metadata:
 spec:
   ports:
   - nodePort: 30701 
-    port: 8100 
+    port: 8012 
     protocol: TCP
     #targetPort: 8100 
   selector:
