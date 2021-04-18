@@ -34,13 +34,13 @@ spec:
         livenessProbe:
           httpGet:
             path: /ConfigServer/default
-            port: 8012
+            port: 30701
           initialDelaySeconds: 60
           periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /ConfigServer/default
-            port: 8012
+            port: 30701
           initialDelaySeconds: 60
           periodSeconds: 10
       restartPolicy: Always
